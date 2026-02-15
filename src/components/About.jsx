@@ -31,7 +31,7 @@ export default function About() {
           className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 rounded-full overflow-hidden shadow-md border-4 border-sky-300/50"
         >
           <img
-            src="/me.jpg"
+            src={`${import.meta.env.BASE_URL}me.jpg`}
             alt="Maolin Chen Profile"
             className="w-full h-full object-cover"
           />
