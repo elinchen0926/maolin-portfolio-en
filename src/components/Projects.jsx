@@ -4,7 +4,7 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { fadeInGrow, sectionVariants, headingVariants, projectCardVariants } from '../utils/variants';
 
 export default function Projects() {
-  const projectsToDisplay = projectsData.slice(0, 3);
+  const projectsToDisplay = projectsData;
 
   return (
     <motion.section
@@ -19,7 +19,7 @@ export default function Projects() {
         className="text-4xl md:text-5xl font-extrabold text-sky-600 mb-12 text-center z-10"
         variants={headingVariants}
       >
-        项目经历
+        Projects
       </motion.h2>
 
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
@@ -64,7 +64,7 @@ export default function Projects() {
                 ))}
               </div>
 
-              <div className="flex justify-end space-x-4 mt-auto">
+              <div className="flex flex-wrap justify-end gap-4 mt-auto">
                 {project.githubLink && (
                   <a
                     href={project.githubLink}
@@ -75,16 +75,18 @@ export default function Projects() {
                     <FaGithub className="mr-1" /> GitHub
                   </a>
                 )}
-                {project.liveLink && (
+
+                {project.links?.map((link, i) => (
                   <a
-                    href={project.liveLink}
+                    key={i}
+                    href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sky-600 hover:text-sky-600 transition-colors duration-200 flex items-center"
                   >
-                    <FaExternalLinkAlt className="mr-1" /> Live Demo
+                    <FaExternalLinkAlt className="mr-1" /> {link.label}
                   </a>
-                )}
+                ))}
               </div>
             </div>
           </motion.div>
@@ -93,7 +95,9 @@ export default function Projects() {
 
       {projectsData.length > 3 && (
         <motion.a
-          href="https://github.com/Gojer16"
+          href="https://github.com/elinchen0926"
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-12 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-lg hover:bg-blue-600 transition-colors duration-300"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

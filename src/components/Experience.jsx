@@ -25,7 +25,7 @@ export default function Experience() {
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        实习经历
+        Experience
       </motion.h2>
 
       <div className="w-full max-w-5xl relative z-10">
@@ -50,8 +50,9 @@ export default function Experience() {
                 variants={contentBlockVariants}
               >
                 <h3 className="text-xl md:text-2xl font-bold text-slate-900 leading-tight mb-2">
-                  {exp.title} | {exp.company}
-                </h3>
+  <span className="block">{exp.title}</span>
+  <span className="block text-slate-800">{exp.company}</span>
+</h3>
 
                 <p className="text-sky-600 text-base md:text-lg font-medium mb-1">
                   {exp.location}
@@ -62,9 +63,7 @@ export default function Experience() {
                 </p>
 
                 <motion.ul
-                  className={`list-disc ${
-                    isEven ? 'md:pl-5' : 'md:pl-5'
-                  } space-y-2 text-slate-700 text-base md:text-lg leading-relaxed`}
+                  className="list-disc md:pl-5 space-y-2 text-slate-700 text-base md:text-lg leading-relaxed"
                 >
                   {exp.description.map((bullet, bulletIndex) => (
                     <motion.li key={bulletIndex} variants={bulletVariants} className="marker:text-sky-500">

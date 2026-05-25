@@ -15,14 +15,14 @@ export default function About() {
         variants={aboutChildVariants}
         className="text-3xl md:text-5xl font-extrabold mb-8 text-sky-600"
       >
-        关于我
+        About Me
       </motion.h2>
 
       <motion.span
         variants={aboutChildVariants}
         className="text-sm md:text-base tracking-wide text-slate-600 text-center font-semibold mb-10 max-w-4xl leading-relaxed"
       >
-        擅长以咨询的战略视野拆解问题，用工程的严谨逻辑验证假设，最终交付可落地的商业成果。
+        Making sense of data, markets, and business problems through structured analysis.
       </motion.span>
 
       <div className="flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-12 max-w-6xl mx-auto">
@@ -32,44 +32,45 @@ export default function About() {
         >
           <img
             src={`${import.meta.env.BASE_URL}me.jpg`}
-            alt="Maolin Chen Profile"
+            alt="Elin Chen Profile"
             className="w-full h-full object-cover"
           />
         </motion.div>
 
         <div className="md:w-2/3 text-base md:text-xl text-slate-700 space-y-6 leading-8 text-center md:text-left">
           <motion.p variants={aboutChildVariants}>
-            我是陈茂林（Abelia），Imperial College London Biomedical Technology Ventures 本科在读。
-            我擅长结构化拆解复杂问题，并将数据洞察转化为可执行的决策方案。
+            I’m Elin Chen, currently studying Biomedical Technology Ventures at Imperial College London,
+            with an upcoming master’s degree in Business Analytics at the National University of Singapore.
+            My work sits across data analysis, business strategy, healthcare, and market research.
           </motion.p>
 
           <motion.p variants={aboutChildVariants}>
-            我的核心能力位于咨询战略、医疗AI研究与产品实践的交叉点。
-            在安永帕特农和天风证券，我聚焦肿瘤创新药赛道，负责患者池测算、市场情景推演，并将专家观点转化为可追溯的决策依据；
-            在医疗AI方向，我参与推进脑区自动化标注与 CGM（连续血糖监测）推理评测基准构建；同时，我也具备从 0 到 1 开发任务管理 Web 工具的落地经验。
+            I have worked on analytical projects across healthcare consulting, equity research, consumer insights,
+            and biomedical data. These experiences have trained me to break down ambiguous problems, structure
+            messy information, and translate findings into clear business recommendations.
           </motion.p>
 
           <motion.p variants={aboutChildVariants}>
-            我习惯使用 Python / Excel 建模与 Think-cell 可视化处理复杂信息，
-            并持续在分析深度、沟通清晰度与落地速度之间寻找更优平衡，
-            目标是在医疗与生命科学场景中打通从数据到策略、再到产品的价值闭环。
+            My toolkit includes Python, SQL, Excel, PowerPoint, and data visualization. I enjoy working with both
+            quantitative data and qualitative evidence, especially when the goal is not just to find patterns,
+            but to support better decisions.
           </motion.p>
 
           <motion.p variants={aboutChildVariants}>
-            如果你正在寻找能够同时处理业务问题与数据问题的合作伙伴，
-            欢迎查看我的
+            I am currently exploring analyst-related roles, including Data Analyst, Business Analyst,
+            Strategy Analyst, and Healthcare Analytics positions. You can view my
             <a href="#experience" className="text-sky-600 hover:text-sky-700 font-semibold transition-colors mx-1">
-              实习经历
+              experience
             </a>
-            、
+            ,
             <a href="#projects" className="text-sky-600 hover:text-sky-700 font-semibold mx-1 transition-colors">
-              项目成果
+              projects
             </a>
-            ，或通过
+            , or
             <a href="#contact" className="text-sky-600 hover:text-sky-700 font-semibold mx-1 transition-colors">
-              联系方式
+              contact
             </a>
-            与我沟通。
+            me to learn more.
           </motion.p>
         </div>
       </div>

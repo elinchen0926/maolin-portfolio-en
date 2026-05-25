@@ -13,7 +13,7 @@ const CircularProgress = ({ percent }) => {
     <svg height={radius * 2} width={radius * 2} className="mx-auto">
       {/* track */}
       <circle
-        stroke="#CBD5E1" // slate-300
+        stroke="#CBD5E1"
         fill="transparent"
         strokeWidth={stroke}
         r={normalizedRadius}
@@ -22,7 +22,7 @@ const CircularProgress = ({ percent }) => {
       />
       {/* progress */}
       <motion.circle
-        stroke="#0EA5E9" // sky-500
+        stroke="#0EA5E9"
         fill="transparent"
         strokeWidth={stroke}
         r={normalizedRadius}
@@ -65,18 +65,18 @@ export default function Skills() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        我的技能
+        Skills
       </motion.h2>
 
       <motion.p
-  className="text-lg md:text-xl text-slate-600 mb-12 text-center whitespace-nowrap"
-  initial={{ opacity: 0, y: -20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.5 }}
-  transition={{ duration: 0.7, delay: 0.2 }}
->
-  致力于将战略思维与数据洞察，转化为可落地的产品方案，输出直接指导决策的核心价值。
-</motion.p>
+        className="text-lg md:text-xl text-slate-600 mb-12 text-center max-w-4xl leading-relaxed"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+      >
+        Combining business analysis, data interpretation, and structured communication to turn complex information into actionable insights.
+      </motion.p>
 
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl"
@@ -116,4 +116,4 @@ export default function Skills() {
       </motion.div>
     </motion.section>
   );
-}
+} 

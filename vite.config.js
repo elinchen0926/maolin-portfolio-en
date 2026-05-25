@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/maolin-portfolio-cn/',   // 👈 关键：改成你的仓库名
+  base: '/',   // 👈 修改为根路径，用于服务器部署
   plugins: [
     react(),
     tailwindcss(),

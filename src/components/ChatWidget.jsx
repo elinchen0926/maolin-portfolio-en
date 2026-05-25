@@ -2,14 +2,13 @@ import { useState } from 'react';
 import { useChat } from '../utils/useChat';
 
 export default function ChatWidget() {
-  // ✅ 把 handleMenuClick 解构出来
   const { messages, input, setInput, loading, handleSend, handleMenuClick } = useChat();
 
   const [open, setOpen] = useState(false);
   const [useStream, setUseStream] = useState(true);
 
   return (
-    <div className="fixed bottom-4 right-8 z-100">
+    <div className="fixed bottom-4 right-8 z-[100]">
       {!open && (
         <button
           onClick={() => setOpen(true)}
@@ -22,7 +21,7 @@ export default function ChatWidget() {
       {open && (
         <div className="flex flex-col h-100 w-100 bg-slate-50 shadow-2xl rounded-xl overflow-hidden">
           <div className="bg-sky-200 text-slate-500 p-3 font-bold flex justify-between items-center">
-            导航助手
+            Navigation Assistant
             <button
               onClick={() => setOpen(false)}
               className="text-slate-500 cursor-pointer hover:bg-sky-200 w-6 hover:rounded-full hover:w-6 font-bold"
@@ -34,7 +33,6 @@ export default function ChatWidget() {
           <div className="flex-1 p-3 overflow-y-auto space-y-2">
             {messages.map((msg, idx) => (
               <div key={idx} className="space-y-2">
-                {/* 气泡 */}
                 <div
                   className={`p-2 rounded-xl max-w-[80%] ${
                     msg.sender === 'user'
@@ -45,7 +43,6 @@ export default function ChatWidget() {
                   {msg.text}
                 </div>
 
-                {/* ✅ 这里就是你要加的渲染位置：菜单按钮 */}
                 {msg.type === 'menu' && Array.isArray(msg.options) && (
                   <div className="flex flex-wrap gap-2 max-w-[90%]">
                     {msg.options.map((opt) => (
@@ -71,7 +68,7 @@ export default function ChatWidget() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               className="flex-1 p-2 outline-none bg-grey-200 text-slate-800 placeholder-slate-400"
-              placeholder="输入：关于我 / 技能 / 实习经历 / 项目经历 / 联系方式"
+              placeholder="Try: about me / skills / experience / projects / contact"
               disabled={loading}
             />
             <button
@@ -79,7 +76,7 @@ export default function ChatWidget() {
               className="bg-sky-300 text-slate-500 px-4 cursor-pointer hover:bg-sky-600 disabled:bg-slate-300"
               disabled={loading}
             >
-              发送
+              Send
             </button>
           </form>
         </div>
